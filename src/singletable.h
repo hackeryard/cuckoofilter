@@ -34,6 +34,7 @@ class SingleTable {
  public:
   explicit SingleTable(const size_t num) : num_buckets_(num) {
     buckets_ = new Bucket[num_buckets_ + kPaddingBuckets];
+    std::cout<<"kBytesPerBucket: "<<kBytesPerBucket<<std::endl;
     memset(buckets_, 0, kBytesPerBucket * (num_buckets_ + kPaddingBuckets));
   }
 
